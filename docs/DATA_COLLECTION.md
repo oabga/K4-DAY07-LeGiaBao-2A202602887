@@ -1,6 +1,6 @@
 # Hướng Dẫn Thu Thập (Crawl) và Chuẩn Hóa Dữ Liệu — K4-L3A
 
-Mỗi nhóm thu thập dữ liệu về chủ đề bắt buộc của lớp **L3A: dịch vụ/quy định đại học**. Mục tiêu là có một bộ tài liệu nhỏ, đáng tin cậy để so sánh retrieval — không phải crawl càng nhiều càng tốt. Xem ràng buộc riêng của L3A tại [`K4_VARIANT.md`](../K4_VARIANT.md).
+Mỗi nhóm thu thập dữ liệu về chủ đề bắt buộc của lớp **L3A: dịch vụ/quy định đại học**. Mục tiêu là có một bộ tài liệu nhỏ, đáng tin cậy để so sánh retrieval — không phải crawl càng nhiều càng tốt. Xem ràng buộc riêng của L3A tại `[K4_VARIANT.md](../K4_VARIANT.md)`.
 
 ## 1. Phạm vi dữ liệu cần nộp
 
@@ -8,6 +8,8 @@ Mỗi nhóm thu thập dữ liệu về chủ đề bắt buộc của lớp **L
 - Thu thập **5–10 tài liệu công khai** liên quan trực tiếp đến chủ đề; ưu tiên nguồn chính thức (trang trường, sổ tay sinh viên, thông báo học vụ), có cấu trúc và ngày cập nhật.
 - Mỗi tài liệu là một file `.md` trong `data/<ten-chu-de>/`; ghi nguồn trong `data/<ten-chu-de>/sources.csv`.
 - Không dùng dữ liệu cá nhân, thông tin đăng nhập, tài liệu nội bộ/không được phép chia sẻ, nội dung sau đăng nhập (ví dụ cổng sinh viên riêng tư), hoặc nội dung có quyền sử dụng không rõ ràng.
+
+
 
 ## 2. Cách crawl/thu thập
 
@@ -19,6 +21,8 @@ Mỗi nhóm thu thập dữ liệu về chủ đề bắt buộc của lớp **L
 6. Đọc lại nội dung đã làm sạch; không tự thêm hoặc suy đoán thông tin không có trong nguồn, và cảnh giác việc công cụ fetch có thể tự dịch nội dung sang tiếng Anh.
 
 > Không bắt buộc nộp scraper. Chỉ nộp script nếu không làm lộ API key hay dữ liệu không được phép chia sẻ.
+
+
 
 ### Dùng crawler mẫu (khuyến nghị)
 
@@ -76,6 +80,8 @@ cần thiết để trả lời benchmark query.
 - Ngoài `audience`, thêm ít nhất một trường hữu ích cho lọc như `department`, `category`, `language`.
 - Nếu một trang gộp thông tin cho nhiều `audience` khác nhau (ví dụ hạn mức mượn sách của sinh viên và giảng viên trên cùng một trang), tách thành nhiều file — mỗi file một `audience` — để `search_with_filter()` có việc thật để lọc.
 - Khi nạp vào `Document`, parse front matter vào `metadata` và chỉ dùng phần bên dưới làm `content`.
+
+
 
 ## 5. File kiểm kê `sources.csv`
 
